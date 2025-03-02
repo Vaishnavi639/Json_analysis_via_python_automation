@@ -1,0 +1,67 @@
+
+=== S3 Bucket Analysis Report ===
+
+
+--- Bucket Summary ---
+Name: prod-data, Region: us-west-2, Size: 120GB, Versioning: Enabled, Created On: 2023-10-12
+  ⚠️ prod-data is unused for 90+ days and >80GB. Consider deletion.
+Name: dev-app-logs, Region: us-east-1, Size: 10GB, Versioning: Disabled, Created On: 2024-02-15
+Name: backup, Region: eu-central-1, Size: 80GB, Versioning: Enabled, Created On: 2022-11-30
+Name: audit-logs, Region: ap-southeast-1, Size: 50GB, Versioning: Enabled, Created On: 2024-01-10
+Name: test-results, Region: us-west-1, Size: 15GB, Versioning: Disabled, Created On: 2024-06-01
+Name: old-backups, Region: us-east-2, Size: 200GB, Versioning: Enabled, Created On: 2020-08-15
+  ⚠️ old-backups is unused for 90+ days and >80GB. Consider deletion.
+Name: staging-resources, Region: eu-west-1, Size: 30GB, Versioning: Disabled, Created On: 2023-12-25
+Name: app-analytics, Region: ap-northeast-1, Size: 250GB, Versioning: Enabled, Created On: 2021-03-18
+  ⚠️ app-analytics is unused for 90+ days and >80GB. Consider deletion.
+Name: raw-data, Region: us-west-2, Size: 90GB, Versioning: Disabled, Created On: 2023-06-20
+  ⚠️ raw-data is unused for 90+ days and >80GB. Consider deletion.
+Name: compliance-data, Region: ca-central-1, Size: 300GB, Versioning: Enabled, Created On: 2022-01-01
+  ⚠️ compliance-data is unused for 90+ days and >80GB. Consider deletion.
+
+--- Cost Report by Region ---
+Region: us-west-2, Total Cost: $4.83
+Region: us-east-1, Total Cost: $0.23
+Region: eu-central-1, Total Cost: $1.84
+Region: ap-southeast-1, Total Cost: $1.15
+Region: us-west-1, Total Cost: $0.34
+Region: us-east-2, Total Cost: $4.60
+Region: eu-west-1, Total Cost: $0.69
+Region: ap-northeast-1, Total Cost: $5.75
+Region: ca-central-1, Total Cost: $6.90
+
+--- Cost Report by Team ---
+Team: analytics, Total Cost: $8.51
+Team: engineering, Total Cost: $0.23
+Team: ops, Total Cost: $6.44
+Team: security, Total Cost: $1.15
+Team: qa, Total Cost: $0.34
+Team: development, Total Cost: $0.69
+Team: data-engineering, Total Cost: $2.07
+Team: compliance, Total Cost: $6.90
+
+--- Cleanup Recommendations ---
+Bucket: prod-data (Consider cleanup)
+Bucket: backup (Consider cleanup)
+Bucket: old-backups (Consider cleanup)
+Bucket: app-analytics (Consider cleanup)
+Bucket: raw-data (Consider cleanup)
+Bucket: compliance-data (Consider cleanup)
+
+--- Deletion Queue ---
+Bucket: prod-data (Flagged for deletion)
+Bucket: old-backups (Flagged for deletion)
+Bucket: app-analytics (Flagged for deletion)
+Bucket: compliance-data (Flagged for deletion)
+
+--- Final Deletion List ---
+Delete: prod-data
+Delete: old-backups
+Delete: app-analytics
+Delete: compliance-data
+
+--- Archival Recommendations (Move to Glacier) ---
+Archive: prod-data
+Archive: old-backups
+Archive: app-analytics
+Archive: compliance-data
